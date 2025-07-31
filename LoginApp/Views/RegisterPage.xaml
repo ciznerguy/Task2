@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LoginApp.Views.RegisterPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:System="clr-namespace:System;assembly=netstandard"
+    Title="הרשמה"
+    BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Image Source="wave_header.png" HeightRequest="160" Aspect="Fill" HorizontalOptions="Fill" />
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Label Text="Sign up" FontAttributes="Bold" TextColor="DarkBlue" />
+                <Label Text="Sign in" TextColor="Blue" TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSignInTapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+            <Entry x:Name="UsernameEntry"
+                   Placeholder="Username"
+                   StyleClass="UnderlineEntry"
+                   Unfocused="Username_Unfocused" />
+            <Entry x:Name="FullNameEntry" Placeholder="Full name" StyleClass="UnderlineEntry" />
+            <Entry x:Name="EmailEntry"
+                   Placeholder="E-mail"
+                   Keyboard="Email"
+                   StyleClass="UnderlineEntry"
+                   Unfocused="Email_Unfocused" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" StyleClass="UnderlineEntry" />
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" StyleClass="UnderlineEntry" />
+
+            <DatePicker x:Name="BirthDatePicker"
+                        Format="dd/MM/yyyy"
+                        DateSelected="BirthDatePicker_DateSelected" />
+            <Label x:Name="AgeLabel" Text="גיל: " FontSize="16" TextColor="Black" />
+
+            <HorizontalStackLayout Spacing="5" VerticalOptions="Center">
+                <CheckBox />
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Agree with " />
+                            <Span Text="Terms &amp; Conditions" TextDecorations="Underline" TextColor="Blue" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </HorizontalStackLayout>
+
+            <Label x:Name="ErrorLabel" TextColor="Red" FontSize="12" IsVisible="False" HorizontalOptions="Center" />
+
+            <Button Text="Sign up"
+                    Clicked="OnRegisterClicked"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Fill" />
+
+            <Label HorizontalOptions="Center" FontSize="13">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="I'm already a member. " />
+                        <Span Text="Sign in" TextDecorations="Underline" TextColor="Blue">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSignInTapped" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

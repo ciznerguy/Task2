@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LoginApp.Views.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="התחברות">
+
+    <Grid>
+        <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Label Text="Sign in" FontAttributes="Bold" TextColor="DarkBlue" />
+                <Label Text="Sign up" TextColor="Blue" TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRegisterClicked" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+            <Label Text="ברוך הבא" FontSize="32" HorizontalOptions="Center" />
+
+            <Entry x:Name="UsernameEntry" Placeholder="שם משתמש" />
+            <Entry x:Name="PasswordEntry" Placeholder="סיסמה" IsPassword="True" />
+
+            <Label x:Name="ErrorLabel" TextColor="Red" IsVisible="False" />
+
+            <Button x:Name="LoginButton" 
+                    Text="התחבר" 
+                    Clicked="OnLoginClicked"
+                    BackgroundColor="#007AFF" />
+
+            <Label Text="אין לך חשבון? לחץ כאן להרשמה"
+                   TextColor="Blue"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRegisterClicked" />
+                </Label.GestureRecognizers>
+            </Label>
+        </VerticalStackLayout>
+
+        <ActivityIndicator x:Name="LoadingIndicator"
+                           IsRunning="False"
+                           IsVisible="False"
+                           Color="#007AFF"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+    </Grid>
+</ContentPage>

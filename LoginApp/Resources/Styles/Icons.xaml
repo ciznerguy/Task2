@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <FontImageSource x:Key="LogoutIcon"
+                     Glyph="&#xe9ba;" 
+                     FontFamily="MaterialIcons"
+                     Size="24"
+                     Color="Red" />
+
+    <FontImageSource x:Key="AddIcon"
+                     Glyph="&#xe145;" 
+                     FontFamily="MaterialIcons"
+                     Size="24"
+                     Color="Green" />
+
+    <FontImageSource x:Key="HomeIcon"
+                     Glyph="&#xe88a;" 
+                     FontFamily="MaterialIcons"
+                     Size="24"
+                     Color="DarkBlue" />
+</ResourceDictionary>

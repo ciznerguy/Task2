@@ -1,0 +1,70 @@
+<Shell  
+    x:Class="LoginApp.AppShell"  
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+    xmlns:local="clr-namespace:LoginApp"  
+    xmlns:views="clr-namespace:LoginApp.Views"  
+    Title="LoginApp">
+
+    <!-- ✅ תצוגת שם המשתמש -->
+    <Shell.TitleView>
+        <Grid HorizontalOptions="Fill"
+              VerticalOptions="Center"
+              Padding="10,0"
+              ColumnDefinitions="*,Auto">
+
+            <Label x:Name="UserTitleLabel"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="DarkBlue"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Start"
+                   Grid.Column="0" />
+
+            <!-- ⬇️ כפתור יציאה עם Border + טקסט + אייקון -->
+            <Border BackgroundColor="IndianRed"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="10,4"
+                    Grid.Column="1">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnLogoutClicked" />
+                </Border.GestureRecognizers>
+
+                <HorizontalStackLayout Spacing="6">
+                    <Label Text="&#xe9ba;"
+                           FontFamily="MaterialIcons"
+                           FontSize="18"
+                           TextColor="White"
+                           VerticalOptions="Center" />
+                    <Label Text="יציאה"
+                           FontSize="14"
+                           TextColor="White"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Border>
+
+        </Grid>
+    </Shell.TitleView>
+
+    <!-- ✅ דפי ניווט -->
+    <ShellContent  
+        Title="התחברות"  
+        ContentTemplate="{DataTemplate views:LoginPage}"  
+        Route="LoginPage" />
+
+    <ShellContent  
+        Title="דף ראשי"  
+        ContentTemplate="{DataTemplate local:MainPage}"  
+        Route="MainPage" />
+
+    <ShellContent  
+        Title="הרשמה"  
+        ContentTemplate="{DataTemplate views:RegisterPage}"  
+        Route="RegisterPage" />
+
+    <ShellContent  
+        Title="משתמשים"  
+        ContentTemplate="{DataTemplate views:UsersListPage}"  
+        Route="UsersListPage" />
+
+</Shell>

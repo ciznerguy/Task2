@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApi", "MauiApi\MauiApi.csproj", "{C22A9AEA-4268-42D7-B097-9AD92295852D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiModels", "MauiModels\MauiModels.csproj", "{34AC8C55-E681-492B-914C-A3422469F559}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginApp", "LoginApp\LoginApp.csproj", "{4F5867C8-2C9F-433C-B43A-4C38F9C372CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C22A9AEA-4268-42D7-B097-9AD92295852D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22A9AEA-4268-42D7-B097-9AD92295852D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22A9AEA-4268-42D7-B097-9AD92295852D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22A9AEA-4268-42D7-B097-9AD92295852D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34AC8C55-E681-492B-914C-A3422469F559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34AC8C55-E681-492B-914C-A3422469F559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34AC8C55-E681-492B-914C-A3422469F559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34AC8C55-E681-492B-914C-A3422469F559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F5867C8-2C9F-433C-B43A-4C38F9C372CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F5867C8-2C9F-433C-B43A-4C38F9C372CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F5867C8-2C9F-433C-B43A-4C38F9C372CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F5867C8-2C9F-433C-B43A-4C38F9C372CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8261BDB4-2FCC-4DFE-A391-4D9312F31B7A}
+	EndGlobalSection
+EndGlobal
